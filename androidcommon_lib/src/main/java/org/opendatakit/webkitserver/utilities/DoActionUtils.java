@@ -76,18 +76,13 @@ public class DoActionUtils {
        JSONObject intentObject) {
 
       Intent i;
-      boolean isCurrentApp = false;
-      String currentApp = "org.opendatakit." + ((IToolAware) (activity
-          .getApplicationContext()))
-          .getToolName();
 
-      boolean isOpendatakitApp = false;
-      if (action.startsWith(currentApp)) {
+     // TODO: Hack ONLY FOR RC2 as it does NOT USE other org.opendatakit apps
+      if (action.startsWith("org.opendatakit.")) {
          Class<?> clazz;
          try {
             clazz = Class.forName(action);
             i = new Intent(activity.getApplicationContext(), clazz);
-            isCurrentApp = true;
          } catch (ClassNotFoundException e) {
             WebLogger.getLogger(activity.getAppName()).printStackTrace(e);
             i = new Intent(action);
@@ -96,6 +91,7 @@ public class DoActionUtils {
          i = new Intent(action);
       }
 
+      boolean isOpendatakitApp = false;
       if (action.startsWith("org.opendatakit.")) {
          isOpendatakitApp = true;
       }
@@ -179,6 +175,9 @@ public class DoActionUtils {
             if (intentObject.has(componentPackageKey) && intentObject.has(componentActivityKey)) {
                String componentPackage = intentObject.getString(componentPackageKey);
                String componentActivity = intentObject.getString(componentActivityKey);
+               if(componentPackage.equals("org.opendatakit.services") || componentPackage.equals("org.opendatakit.survey")) {
+                  componentPackage = "org.opendatakit.tables";
+               }
                i.setComponent(new ComponentName(componentPackage, componentActivity));
             }
          }
