@@ -21,9 +21,7 @@ import org.opendatakit.application.CommonApplication;
  */
 public class DependencyChecker {
 
-    public static final String surveyAppPkgName = "org.opendatakit.survey";
     private static final String oiFileMgrPkgName = "org.openintents.filemanager";
-    private static final String servicesAppPkgName = "org.opendatakit.services";
 
     private static final String tables = "tables";
     private static final String scan = "scan";

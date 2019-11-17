@@ -49,9 +49,6 @@ public abstract class CommonApplication extends ToolAwareApplication implements
 
   // Used for logging
   private static final String TAG = CommonApplication.class.getSimpleName();
-  
-  public static final String PERMISSION_WEBSERVER = "org.opendatakit.webkitserver.RUN_WEBSERVER";
-  public static final String PERMISSION_DATABASE = "org.opendatakit.database.RUN_DATABASE";
 
   /**
    * Task instances that are preserved until the application dies.
