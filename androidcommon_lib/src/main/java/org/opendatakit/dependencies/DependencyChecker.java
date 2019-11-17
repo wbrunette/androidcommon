@@ -46,8 +46,8 @@ public class DependencyChecker {
             oiInstalled = true;
         }
 
-        servicesInstalled = isPackageInstalled(context, servicesAppPkgName);
-
+      //  servicesInstalled = isPackageInstalled(context, servicesAppPkgName);
+        servicesInstalled = true;
         if (oiInstalled && servicesInstalled) { // correct dependencies installed
             return true;
         } else {

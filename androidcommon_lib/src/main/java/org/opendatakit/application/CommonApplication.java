@@ -404,12 +404,10 @@ public abstract class CommonApplication extends ToolAwareApplication implements
   private void bindToService() {
     if (!shuttingDown) {
       PackageManager pm = getPackageManager();
-      boolean useWebServer = (pm.checkPermission(PERMISSION_WEBSERVER, getPackageName()) == PackageManager.PERMISSION_GRANTED);
-      boolean useDatabase = (pm.checkPermission(PERMISSION_DATABASE, getPackageName()) == PackageManager.PERMISSION_GRANTED);
 
-      Log.i(TAG, "bindToService -- useWebServer " + Boolean.toString(useWebServer)
-          + " useDatabase " + Boolean.toString(useDatabase) );
-      mBackgroundServices.bindToService(this, useWebServer, useDatabase);
+      Log.i(TAG, "bindToService -- useWebServer " + Boolean.toString(true)
+          + " useDatabase " + Boolean.toString(true) );
+      mBackgroundServices.bindToService(this, true, true);
     }
   }
 

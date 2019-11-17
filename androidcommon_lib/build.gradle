@@ -98,22 +98,11 @@ allprojects {
 }
 
 dependencies {
-    api fileTree(include: '*.jar', dir: 'libs')
     implementation 'androidx.annotation:annotation:1.1.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.preference:preference:1.1.0'
 
-    if (libraryProjectPath.exists() && gradle.useLocal) { // Local project is favoured
-        implementation project(libraryProjectName)
-    } else {
-        demoImplementation(group: groupId, name: libraryDemoArtifactName, classifier: demoRelease,
-                    version: latestVersion, ext: 'aar')
-        masterImplementation(group: groupId, name: libraryMasterArtifactName, classifier: masterRelease,
-                      version: masterArtifactVersion, ext: 'aar')
-        snapshotImplementation(group: groupId, name: librarySnapshotArtifactName,
-                classifier: snapshotRelease, version: latestVersion, ext: 'aar')
-    }
-
+    api project(libraryProjectName)
     // Testing dependencies
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
