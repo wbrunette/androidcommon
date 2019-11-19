@@ -16,6 +16,7 @@ package org.opendatakit.application;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.Application;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -290,8 +291,10 @@ public abstract class CommonApplication extends ToolAwareApplication implements
     shuttingDown = false;
     super.onCreate();
 
-    if (Build.VERSION.SDK_INT >= 19) {
-      WebView.setWebContentsDebuggingEnabled(true);
+    if(Application.getProcessName().equals("org.opendatakit.tables")){
+      if (Build.VERSION.SDK_INT >= 19) {
+        WebView.setWebContentsDebuggingEnabled(true);
+      }
     }
   }
 
