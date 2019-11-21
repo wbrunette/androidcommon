@@ -291,10 +291,12 @@ public abstract class CommonApplication extends ToolAwareApplication implements
     shuttingDown = false;
     super.onCreate();
 
-    if(Application.getProcessName().equals("org.opendatakit.tables")){
-      if (Build.VERSION.SDK_INT >= 19) {
+    if(android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+      if (Application.getProcessName().equals("org.opendatakit.tables")) {
         WebView.setWebContentsDebuggingEnabled(true);
       }
+    } else {
+      WebView.setWebContentsDebuggingEnabled(true);
     }
   }
 
