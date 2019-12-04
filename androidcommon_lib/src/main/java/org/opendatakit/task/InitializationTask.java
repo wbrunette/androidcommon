@@ -15,6 +15,7 @@
 package org.opendatakit.task;
 
 import android.os.AsyncTask;
+
 import org.opendatakit.application.CommonApplication;
 import org.opendatakit.builder.InitializationOutcome;
 import org.opendatakit.builder.InitializationSupervisor;

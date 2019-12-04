@@ -15,6 +15,7 @@
 package org.opendatakit.views;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+
 import org.opendatakit.activities.IOdkDataActivity;
 import org.opendatakit.database.data.OrderedColumns;
 import org.opendatakit.database.service.DbHandle;

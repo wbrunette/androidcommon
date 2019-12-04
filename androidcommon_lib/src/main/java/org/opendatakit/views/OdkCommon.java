@@ -22,7 +22,9 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.webkit.URLUtil;
+
 import com.fasterxml.jackson.core.type.TypeReference;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.JSONTokener;

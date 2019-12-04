@@ -29,6 +29,7 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.util.Log;
 import android.webkit.WebView;
+
 import org.opendatakit.consts.IntentConsts;
 import org.opendatakit.consts.WebkitServerConsts;
 import org.opendatakit.database.service.IDbInterface;

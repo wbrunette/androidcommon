@@ -15,6 +15,7 @@
 package org.opendatakit.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import org.opendatakit.application.CommonApplication;
 import org.opendatakit.listener.DatabaseConnectionListener;
 

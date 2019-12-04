@@ -1,6 +1,5 @@
 package org.opendatakit.data;
 
-import org.opendatakit.database.data.Row;
 import org.opendatakit.database.data.TypedRow;
 import org.opendatakit.database.data.UserTable;
 

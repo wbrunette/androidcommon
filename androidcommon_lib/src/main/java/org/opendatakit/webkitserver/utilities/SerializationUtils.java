@@ -15,6 +15,7 @@
 package org.opendatakit.webkitserver.utilities;
 
 import android.os.Bundle;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;

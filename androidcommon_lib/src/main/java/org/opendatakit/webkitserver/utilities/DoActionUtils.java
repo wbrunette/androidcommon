@@ -4,12 +4,12 @@ import android.content.ComponentName;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 import org.opendatakit.activities.IOdkCommonActivity;
-import org.opendatakit.application.IToolAware;
 import org.opendatakit.consts.IntentConsts;
 import org.opendatakit.logging.WebLogger;
 import org.opendatakit.properties.CommonToolProperties;
@@ -176,7 +176,7 @@ public class DoActionUtils {
                String componentPackage = intentObject.getString(componentPackageKey);
                String componentActivity = intentObject.getString(componentActivityKey);
                if(componentPackage.equals("org.opendatakit.services") || componentPackage.equals("org.opendatakit.survey")) {
-                  componentPackage = "org.opendatakit.tables";
+                  componentPackage = IntentConsts.RC2_APPICATION_PACKAGE;
                }
                i.setComponent(new ComponentName(componentPackage, componentActivity));
             }

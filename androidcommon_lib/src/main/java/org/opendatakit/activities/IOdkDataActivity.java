@@ -15,6 +15,7 @@
 package org.opendatakit.activities;
 
 import android.os.Bundle;
+
 import org.opendatakit.database.queries.ResumableQuery;
 import org.opendatakit.database.service.UserDbInterface;
 import org.opendatakit.listener.DatabaseConnectionListener;

@@ -14,7 +14,9 @@
 package org.opendatakit.data.utilities;
 
 import android.content.Context;
+
 import com.fasterxml.jackson.core.JsonProcessingException;
+
 import org.opendatakit.aggregate.odktables.rest.ElementDataType;
 import org.opendatakit.aggregate.odktables.rest.KeyValueStoreConstants;
 import org.opendatakit.data.TableViewType;

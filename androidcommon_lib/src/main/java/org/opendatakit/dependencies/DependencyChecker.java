@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
+
 import org.opendatakit.androidcommon.R;
 import org.opendatakit.application.CommonApplication;
 

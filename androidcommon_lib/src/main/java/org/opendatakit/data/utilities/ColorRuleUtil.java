@@ -16,6 +16,7 @@
 package org.opendatakit.data.utilities;
 
 import android.graphics.Color;
+
 import org.opendatakit.aggregate.odktables.rest.SyncState;
 import org.opendatakit.data.ColorRule;
 import org.opendatakit.provider.DataTableColumns;

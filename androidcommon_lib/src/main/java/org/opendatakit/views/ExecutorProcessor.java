@@ -15,8 +15,11 @@
 package org.opendatakit.views;
 
 import android.content.ContentValues;
+
 import androidx.annotation.NonNull;
+
 import com.fasterxml.jackson.core.type.TypeReference;
+
 import org.opendatakit.aggregate.odktables.rest.ElementDataType;
 import org.opendatakit.aggregate.odktables.rest.KeyValueStoreConstants;
 import org.opendatakit.aggregate.odktables.rest.entity.Column;

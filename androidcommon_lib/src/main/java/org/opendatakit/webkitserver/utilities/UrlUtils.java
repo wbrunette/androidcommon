@@ -15,6 +15,7 @@
 package org.opendatakit.webkitserver.utilities;
 
 import android.net.Uri;
+
 import org.opendatakit.consts.WebkitServerConsts;
 
 import java.net.URI;
